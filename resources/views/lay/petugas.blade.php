@@ -32,6 +32,7 @@
           <ul class="navbar-nav">
             <li class="nav-item"><a href="/petugas/masyarakat" class="nav-link">Data Masyarakat</a></li>
             <li class="nav-item"><a href="/petugas/aduan" class="nav-link">Data Pengaduan</a></li>
+            <li class="nav-item"><a href="/petugas/form-pengaduan" class="nav-link">Tambah Pengaduan</a></li>
             {{-- <li class="nav-item"><a href="#" class="nav-link">Server Status</a></li> --}}
           </ul>
         </div>

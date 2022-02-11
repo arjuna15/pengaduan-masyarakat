@@ -10,7 +10,7 @@
 <div class="card card-primary">
 <div class="card-header"><h4>Aduan Dari : {{ $data->user->nama }}</h4></div>
 <div class="card-body">
-<form method="POST" action="/pengaduan/detail/{{ $data->id }}">
+<form method="POST" action="/admin/pengaduan/detail/{{ $data->id }}">
 @csrf
     <div class="form-group">
     <label for="tanggal">Tanggal & Tahun</label>

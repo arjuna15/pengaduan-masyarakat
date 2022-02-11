@@ -34,9 +34,9 @@
         <td>{{ $d->tanggal }}</td>
         <td>  <img style="width:40px" src="{{ url('/storage/' .$d->gambar) }}"> </td>
         <td>
-        <a href="/pengaduan/detail/{{ $d->id }}"><i class="fa fa-eye"> </i></a>
-        {{-- <a href="/pengaduan/status"><i class="fa fa-check ml-3"> </i></a> --}}
-        <a href="/pengaduan/{{ $d->id }}/status?status=TERIMA" class="btn btn-success btn-sm"> <i class="fa fa-check"> </i> </a>
+        <a href="/admin/pengaduan/detail/{{ $d->id }}"><i class="fa fa-eye"> </i></a>
+        {{-- <a href="/admin/pengaduan/status"><i class="fa fa-check ml-3"> </i></a> --}}
+        <a href="/admin/pengaduan/{{ $d->id }}/status?status=TERIMA" class="btn btn-success btn-sm"> <i class="fa fa-check"> </i> </a>
         </td>
       </tr>
       @endforeach

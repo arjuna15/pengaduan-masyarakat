@@ -40,17 +40,18 @@ Route::get('/masyarakat/form-pengaduan', [MasyarakatController::class, 'listpeng
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/masyarakat', [AdminController::class, 'masyarakat']);
 Route::get('/admin/aduan', [AdminController::class, 'aduan']);
-Route::get('/pengaduan/detail/{id}', [AdminController::class, 'detail']);
+Route::get('/admin/pengaduan/detail/{id}', [AdminController::class, 'detail']);
 // Route::get('/tanggapan/{id}/status', [AdminController::class, 'status']);
-Route::post('/pengaduan/detail/{id}', [AdminController::class, 'tanggapan']);
-Route::get('/pengaduan/{id}/status', [AdminController::class, 'status']);
+Route::post('/admin//pengaduan/detail/{id}', [AdminController::class, 'tanggapan']);
+Route::get('/admin/pengaduan/{id}/status', [AdminController::class, 'status']);
 
 // Petugas
 Route::get('/petugas', [PetugasController::class, 'index']);
 Route::get('/petugas/masyarakat', [PetugasController::class, 'masyarakat']);
 Route::get('/petugas/aduan', [PetugasController::class, 'aduan']);
-Route::get('/pengaduan/detail/{id}', [PetugasController::class, 'detail']);
+Route::get('/petugas/pengaduan/detail/{id}', [PetugasController::class, 'detail']);
 // Route::get('/tanggapan/{id}/status', [PetugasController::class, 'status']);
-Route::post('/pengaduan/detail/{id}', [PetugasController::class, 'tanggapan']);
-Route::get('/pengaduan/{id}/status', [PetugasController::class, 'status']);
+Route::post('/petugas/pengaduan/detail/{id}', [PetugasController::class, 'tanggapan']);
+Route::get('/petugas/pengaduan/{id}/status', [PetugasController::class, 'status']);
+Route::get('/petugas/form-pengaduan', [PetugasController::class, 'formpengaduan']);
 

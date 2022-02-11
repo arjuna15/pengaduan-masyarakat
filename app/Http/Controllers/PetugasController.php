@@ -62,5 +62,37 @@ class PetugasController extends Controller
 
         return back();
     }
+    public function formpengaduan()
+    {
+        $id = Auth()->user()->id;
+        $data = DB::table('pengaduan')->where('id_user', $id)->get();
+        return view('petugas.form-pengaduan', compact('data'));
+    }
+
+    public function pengaduan(Request $req)
+    {
+    //    return $req;
+        // $req->validate([
+        //     'id' => 'required',
+        //     'id_user' => 'required',
+        //     'judul' => 'required',
+        //     'tanggal' => 'required',
+        //     'isi' => 'required',
+        //     'status' => 'required'
+        // ]);
+
+        $data = new Pengaduan;
+        $data->id_user = Auth()->user()->id;
+        $data->judul = $req->judul;
+        $data->tanggal = $req->tanggal;
+        $data->isi = $req->isi;
+        $data->gambar = $req->file('gambar')->store('/asset/gambar', 'public');
+        $data->status = "PROSES";
+        $data->save();
+
+        Alert::success('Terkirim!', 'Pengaduan berhasil dikirim, silahkan tunggu petugas untuk mersepon');
+        return back();
+
+    }
 }
 
